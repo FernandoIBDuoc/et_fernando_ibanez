@@ -66,6 +66,37 @@ def actualizar_precio(codigo, nuevo_precio):
 def agregar_prenda(codigo, nombre, categoria, talla, color, material, es_unisex, precio, unidades):
     print("")
 
+# Validaciones:
+def validar_codigo(codigo):
+    if codigo== " " or codigo== prendas and bodega:
+        return False
+    else:
+        return True
+    
+def validar_nombre(nombre):
+    if nombre == " ":
+        return False
+    else:
+        return True
+    
+def validar_categoria(categoria):
+    if categoria == " ":
+        return False
+    else:
+        return True
+    
+def validar_talla(talla):
+    if talla == " ":
+        return False
+    else:
+        return True
+    
+def validar_color(color):
+    if color == " ":
+        return False
+    else:
+        return True
+
 # Opción 5:
 def eliminar_prenda(codigo):
     print("")
@@ -111,8 +142,20 @@ while True:
         busqueda_precio(p_min=(int(input("Ingrese el precio mínimo: "))))
         busqueda_precio(p_max=(int(input("Ingrese el precio máximo: "))))
     elif opt==3:
-        print("")
+        buscar_codigo(input("Introduce el código de la prenda: "))
+        actualizar_precio()
     elif opt==4:
-        print("")
+        agregar_prenda(codigo=input("Introduce el código: "))
+        agregar_prenda(nombre=input("Introduce  el nombre: "))
+        agregar_prenda(categoria=input("Introduce la categoría: "))
+        agregar_prenda(talla=input("Introduce la talla: "))
+        agregar_prenda(color=input("Introduce el color: "))
+        agregar_prenda(material=input("Introduce el material: "))
+        agregar_prenda(es_unisex=bool(input("¿Es unisex? (s/n): ")))
+        agregar_prenda(precio=int(input("Indica su precio: ")))
+        agregar_prenda(unidades=int("Introduce la cantidad de unidades: "))
+    elif opt==5:
+        eliminar_prenda(codigo=input("Introduce el código para eliminar la prenda: "))
     elif opt==6:
-        print("")
+        print("Programa finalizado.")
+        break
