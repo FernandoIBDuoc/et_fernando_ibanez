@@ -34,7 +34,19 @@ def unidades_categoria(categoria):
 
 # Opción 2:
 def busqueda_precio(p_min, p_max):
-    print("")
+    try:
+        if p_min > p_max or p_max< p_min:
+            prendas_dentro_del_rango={}
+            print("Error: El precio minimo debe ser menor al precio maximo y viceversa")
+        else:
+            for bodega in range(p_min,p_max):
+                prendas_dentro_del_rango={
+                    'a': [p_min],
+                    'b': [p_max]
+                }.update()
+                print(prendas_dentro_del_rango)
+    except ValueError:
+        print("Debe ingresar valores enteros.")
 
 # Opción 3:
 def buscar_codigo(codigo):
@@ -88,7 +100,8 @@ while True:
     if opt==1:
         unidades_categoria(categoria=(input("Ingrese categoría a consultar: ").lower()))
     elif opt==2:
-        print("")
+        busqueda_precio(p_min=(int(input("Ingrese el precio mínimo: "))))
+        busqueda_precio(p_max=(int(input("Ingrese el precio máximo: "))))
     elif opt==3:
         print("")
     elif opt==4:
