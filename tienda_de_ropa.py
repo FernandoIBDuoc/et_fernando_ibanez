@@ -1,6 +1,5 @@
 #  Iniciamos con el diccionario de las prendas.
 # nombre, categoria, talla, color, material, es_unisex
-
 prendas = {
 'S001': ['Polera Basica', 'polera', 'M', 'negro', 'algodon', True],
 'S002': ['Jeans Slim', 'pantalon', 'L', 'azul','denim', False],
@@ -12,7 +11,6 @@ prendas = {
 
 # Diccionario de bodega.
 # precio, unidades.
-
 bodega = {
 'S001': [7990, 12],
 'S002': [19990, 0],
@@ -21,3 +19,75 @@ bodega = {
 'S005': [17990, 8],
 'S006': [14990, 2]
 }
+
+# Se agrega el menú del programa.
+def menu():
+    print('''
+========== MENÚ PRINCIPAL ==========
+1. Unidades por categoría
+2. Búsqueda de prendas por rango de precio
+3. Actualizar precio de prenda
+4. Agregar prenda
+5. Eliminar prenda
+6. Salir
+=====================================
+''')
+    
+# Opción 1:
+def unidades_categoria(categoria):
+    print("")
+
+# Opción 2:
+def busqueda_precio(p_min, p_max):
+    print("")
+
+# Opción 3:
+def buscar_codigo(codigo):
+    print("")
+def actualizar_precio(codigo, nuevo_precio):
+    print("")
+
+# Opción 4:
+def agregar_prenda(codigo, nombre, categoria, talla, color, material, es_unisex, precio, unidades):
+    print("")
+
+# Opción 5:
+def eliminar_prenda(codigo):
+    print("")
+
+    
+def leer_opcion():
+    try:
+        opcion=int(input("Ingrese opción: "))
+        if opcion==1:
+            return opcion
+        elif opcion==2:
+            return opcion
+        elif opcion==3:
+            return opcion
+        elif opcion==4:
+            return opcion
+        elif opcion==5:
+            return opcion
+        elif opcion==6:
+            return opcion
+        else:
+            print("Opción no válida, seleccione una opción correcta.")
+            return None
+    except ValueError:
+        print("Error: ingrese un número entero.")
+        return None
+
+while True:
+    menu()
+    opt=leer_opcion()
+    if opt==1:
+        print("Si funciona no se toca")
+    elif opt==2:
+        print("")
+    elif opt==3:
+        print("")
+    elif opt==4:
+        print("")
+    elif opt==6:
+        print("")
