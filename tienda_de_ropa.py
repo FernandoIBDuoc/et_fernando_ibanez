@@ -50,9 +50,17 @@ def busqueda_precio(p_min, p_max):
 
 # Opción 3:
 def buscar_codigo(codigo):
-    print("")
+    for codigo in bodega:
+        if codigo== bodega:
+            return True
 def actualizar_precio(codigo, nuevo_precio):
-    print("")
+    buscar_codigo()
+    if buscar_codigo== True:
+        bodega.update
+        print(bodega)
+    else:
+        return False
+
 
 # Opción 4:
 def agregar_prenda(codigo, nombre, categoria, talla, color, material, es_unisex, precio, unidades):
